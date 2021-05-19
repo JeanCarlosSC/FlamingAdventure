@@ -1,0 +1,2 @@
+rootProject.name = "Flaming Adventure"
+include ':app'
