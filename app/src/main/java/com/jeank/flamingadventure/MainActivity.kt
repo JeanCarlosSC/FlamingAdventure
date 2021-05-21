@@ -1,8 +1,10 @@
 package com.jeank.flamingadventure
 
-import androidx.appcompat.app.AppCompatActivity
+import android.R
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.jeank.flamingadventure.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -35,9 +37,22 @@ class MainActivity : AppCompatActivity() {
             System.loadLibrary("native-lib")
         }
     }
+
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
         if (hasFocus) hideSystemUI()
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setIcon(R.drawable.ic_dialog_alert)
+            .setTitle("Closing Activity")
+            .setMessage("Are you sure you want to close this activity?")
+            .setPositiveButton(
+                "Yes"
+            ) { dialog, which -> finish() }
+            .setNegativeButton("No", null)
+            .show()
     }
 
     private fun hideSystemUI() {
