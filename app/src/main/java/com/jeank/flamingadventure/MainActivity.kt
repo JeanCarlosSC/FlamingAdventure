@@ -46,12 +46,12 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         AlertDialog.Builder(this)
             .setIcon(R.drawable.ic_dialog_alert)
-            .setTitle("Closing Activity")
-            .setMessage("Are you sure you want to close this activity?")
+            .setTitle("Confirm exit")
+            .setMessage("Do you want to quit the game?")
             .setPositiveButton(
-                "Yes"
+                "Okay"
             ) { dialog, which -> finish() }
-            .setNegativeButton("No", null)
+            .setNegativeButton("Cancel", null)
             .show()
     }
 
