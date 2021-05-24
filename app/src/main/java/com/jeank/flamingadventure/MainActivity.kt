@@ -1,6 +1,7 @@
 package com.jeank.flamingadventure
 
 import android.R
+import android.app.ActivityOptions
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
@@ -80,9 +81,9 @@ class MainActivity : AppCompatActivity() {
     /**
      * Called when the user taps the editor button
      */
-    fun toMyLevelsActivity(view: View) {
+    fun toMyLevelsActivity(view: View){
         val intent = Intent(this, MyLevelsActivity::class.java)
-        startActivity(intent)
+        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
     }
 
 }
