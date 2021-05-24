@@ -17,4 +17,9 @@
     <color name="orange">#fe571b</color>
     <color name="yellow">#e5b11c</color>
 
+    <!-- B/W -->
+    <color name="dark_gray">#424242</color>
+    <color name="gray">#838383</color>
+    <color name="light_gray">#c9c9c9</color>
+
 </resources>
