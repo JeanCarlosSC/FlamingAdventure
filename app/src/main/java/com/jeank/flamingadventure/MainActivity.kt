@@ -74,6 +74,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
+     * Called when the user taps the exit button
+     */
+    fun showExitDialog(view: View) {
+        onBackPressed()
+    }
+
+    /**
      * Called when the user taps the editor button
      */
     fun toMyLevelsActivity(view: View) {
